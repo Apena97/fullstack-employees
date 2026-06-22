@@ -10,9 +10,9 @@ async function seedEmployees() {
   // TODO
   for (let i = 0; i < 15; i++) {
     const employee = {
-      name: faker.name.fullName(),
-      birthday: faker.date.past(50).toISOString().split("T")[0],
-      salary: faker.datatype.number({ min: 40000, max: 100000 }),
+      name: "Employee " + i,
+      birthday: "1001-10-01",
+      salary: Math.floor(Math.random() * 500000),
     };
     await createEmployee(employee);
   }
